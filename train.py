@@ -4,6 +4,11 @@
 !pip install mmengine
 !pip install -e .
 
+import sys
+sys.path.append('/kaggle/working/Riset/mmcv')
+sys.path.append('/kaggle/working/Riset/ultralytics')
+sys.path.append('/kaggle/working/Riset/mmengine')
+  
 import ultralytics
 from ultralytics import YOLO
 ultralytics.checks()
