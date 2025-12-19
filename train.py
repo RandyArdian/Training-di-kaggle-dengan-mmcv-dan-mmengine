@@ -29,7 +29,7 @@ elif logger == 'Weights & Biases':
   !yolo settings wandb=True
   
 #Train YOLO11n
-!yolo train model="YOLO/yolo11n.yaml" data=VisDrone.yaml epochs=100 imgsz=640 resume=True
+!yolo train model="YOLO/yolo11n.yaml" data=VisDrone.yaml epochs=200 imgsz=800 resume=True batch=32 optimizer=SGD momentum=0.937 warmup_momentum=0.8 
 
 # Validate YOLO11n (contoh)
 !yolo val model=yolo11n.pt data=coco8.yaml
